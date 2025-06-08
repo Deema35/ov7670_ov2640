@@ -1,0 +1,13 @@
+# Project files
+
+*.bak
+*.log
+*.rpt
+
+# Folders
+db/*
+incremental_db/*
+output_files/*
+greybox_tmp/*
+.qsys_edit/*
+

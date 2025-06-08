@@ -1,0 +1,233 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+# Date created = 10:14:37  April 21, 2025
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		OV7670_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE15F23C8
+set_global_assignment -name TOP_LEVEL_ENTITY OV7670
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:14:37  APRIL 21, 2025"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Standard Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity SDRAM_Test -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity SDRAM_Test -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity SDRAM_Test -section_id Top
+set_location_assignment PIN_T2 -to clk_50
+set_location_assignment PIN_W13 -to RESET_N
+set_location_assignment PIN_E4 -to LEDR
+set_location_assignment PIN_B2 -to Green[0]
+set_location_assignment PIN_C2 -to Green[1]
+set_location_assignment PIN_D2 -to Green[2]
+set_location_assignment PIN_F2 -to Green[3]
+set_location_assignment PIN_H2 -to Red[0]
+set_location_assignment PIN_J2 -to Red[1]
+set_location_assignment PIN_M2 -to Red[2]
+set_location_assignment PIN_N2 -to Red[3]
+set_location_assignment PIN_P2 -to Vsync
+set_location_assignment PIN_R2 -to Hsync
+set_location_assignment PIN_AA13 -to Blue[3]
+set_location_assignment PIN_AA14 -to Blue[2]
+set_location_assignment PIN_AA15 -to Blue[1]
+set_location_assignment PIN_AA16 -to Blue[0]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity SDRAM_Test -section_id Top
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Blue[3]
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Blue[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Blue[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Blue[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Green[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Green[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RESET_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Green[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Green[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Hsync
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Vsync
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Red[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Red[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Red[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Red[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk_50
+set_location_assignment PIN_A17 -to CAM_DATA[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CAM_DATA[0]
+set_location_assignment PIN_A13 -to CAM_DATA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CAM_DATA[1]
+set_location_assignment PIN_A18 -to CAM_DATA[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CAM_DATA[2]
+set_location_assignment PIN_A10 -to CAM_DATA[3]
+set_location_assignment PIN_A19 -to CAM_DATA[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CAM_DATA[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CAM_DATA[3]
+set_location_assignment PIN_A9 -to CAM_DATA[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CAM_DATA[5]
+set_location_assignment PIN_A20 -to CAM_DATA[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CAM_DATA[6]
+set_location_assignment PIN_A8 -to CAM_DATA[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CAM_DATA[7]
+set_location_assignment PIN_A14 -to CAM_RESET
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CAM_RESET
+set_location_assignment PIN_A7 -to CAM_PCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CAM_PCLK
+set_location_assignment PIN_A6 -to CAM_XCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CAM_XCLK
+set_location_assignment PIN_A5 -to CAM_HREF
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CAM_HREF
+set_location_assignment PIN_C3 -to CAM_VSYNC
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CAM_VSYNC
+set_location_assignment PIN_A4 -to CAM_scl_io
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CAM_scl_io
+set_location_assignment PIN_A3 -to CAM_sda_io
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CAM_sda_io
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SYSTEMVERILOG_FILE OV7670.sv
+set_global_assignment -name SYSTEMVERILOG_FILE i2c_controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE i2c_controller_Test.sv
+set_global_assignment -name SYSTEMVERILOG_FILE i2c_slave.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VideoAdapter_M.sv
+set_global_assignment -name SYSTEMVERILOG_FILE TextController.sv
+set_global_assignment -name QIP_FILE PLL.qip
+set_location_assignment PIN_R1 -to Analiz_scl
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Analiz_scl
+set_location_assignment PIN_P1 -to Analiz_sda
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Analiz_sda
+set_global_assignment -name SYSTEMVERILOG_FILE sccb_controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sccb_controller_Test.sv
+set_global_assignment -name SYSTEMVERILOG_FILE OV7670_init.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SDRAM_controller.sv
+set_location_assignment PIN_V1 -to DRAM_ADDR[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[1]
+set_location_assignment PIN_V2 -to DRAM_ADDR[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[0]
+set_location_assignment PIN_U2 -to DRAM_ADDR[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[2]
+set_location_assignment PIN_U1 -to DRAM_ADDR[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[3]
+set_location_assignment PIN_V3 -to DRAM_ADDR[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[4]
+set_location_assignment PIN_V4 -to DRAM_ADDR[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[5]
+set_location_assignment PIN_Y2 -to DRAM_ADDR[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[6]
+set_location_assignment PIN_AA1 -to DRAM_ADDR[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[7]
+set_location_assignment PIN_Y13 -to KEY_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY_N
+set_location_assignment PIN_Y3 -to DRAM_ADDR[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[8]
+set_location_assignment PIN_V5 -to DRAM_ADDR[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[9]
+set_location_assignment PIN_W1 -to DRAM_ADDR[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[10]
+set_location_assignment PIN_Y4 -to DRAM_ADDR[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[11]
+set_location_assignment PIN_V6 -to DRAM_ADDR[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[12]
+set_location_assignment PIN_Y1 -to DRAM_BA[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[0]
+set_location_assignment PIN_W2 -to DRAM_BA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[1]
+set_location_assignment PIN_AA4 -to DRAM_CAS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CAS_N
+set_location_assignment PIN_W6 -to DRAM_CKE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CKE
+set_location_assignment PIN_Y6 -to DRAM_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CLK
+set_location_assignment PIN_AA3 -to DRAM_CS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CS_N
+set_location_assignment PIN_AA10 -to DRAM_DQ[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[0]
+set_location_assignment PIN_AB9 -to DRAM_DQ[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[1]
+set_location_assignment PIN_AA9 -to DRAM_DQ[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[2]
+set_location_assignment PIN_AB8 -to DRAM_DQ[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[3]
+set_location_assignment PIN_AA8 -to DRAM_DQ[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[4]
+set_location_assignment PIN_AB7 -to DRAM_DQ[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[5]
+set_location_assignment PIN_AB5 -to DRAM_DQ[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[7]
+set_location_assignment PIN_AA7 -to DRAM_DQ[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[6]
+set_location_assignment PIN_Y7 -to DRAM_DQ[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[8]
+set_location_assignment PIN_W8 -to DRAM_DQ[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[9]
+set_location_assignment PIN_Y8 -to DRAM_DQ[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[10]
+set_location_assignment PIN_V9 -to DRAM_DQ[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[11]
+set_location_assignment PIN_V10 -to DRAM_DQ[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[12]
+set_location_assignment PIN_Y10 -to DRAM_DQ[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[13]
+set_location_assignment PIN_W10 -to DRAM_DQ[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[14]
+set_location_assignment PIN_V11 -to DRAM_DQ[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[15]
+set_location_assignment PIN_AA5 -to DRAM_LDQM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_LDQM
+set_location_assignment PIN_AB3 -to DRAM_RAS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_RAS_N
+set_location_assignment PIN_W7 -to DRAM_UDQM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_UDQM
+set_location_assignment PIN_AB4 -to DRAM_WE_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_WE_N
+set_global_assignment -name SYSTEMVERILOG_FILE Camera_Frame.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Picture_Controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Debouncer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE OV7670_Config_ROM.sv
+set_global_assignment -name SYSTEMVERILOG_FILE OV2640_Config_ROM.sv
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+set_global_assignment -name SYSTEMVERILOG_FILE BufferFiller.sv
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
