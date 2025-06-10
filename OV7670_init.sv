@@ -126,7 +126,6 @@ localparam 	S_BEGIN = 4'd0,
 				S_READREADY_WAITE = 4'd3,
 				S_GET_ID_ov2640 = 4'd4,
 				S_READREADY_WAITE_2 = 4'd5,
-				S_GET_ID_gc2035 = 4'd6,
 				S_CONFIG = 4'd7,
 				S_END = 4'd8;
 
@@ -224,32 +223,10 @@ begin
 		begin
 			Cam_ID = 'h00;
 			IDget <= 1'b0;
-			if(!Read_ready) State_main <= S_GET_ID_gc2035;
+			if(!Read_ready) State_main <= S_END;
 		end
 		
-		S_GET_ID_gc2035:
-		begin
-			sccb_addr <= gc2035_ADDR;
-			if(Read_ready)
-			begin
-				Read_valid <= 'b0;
-				if (Cam_ID == 'h20) State_main <= S_CONFIG;
-				else State_main <= S_END;
-				
-			end
-			else
-			begin
-				if(Valid_Symbol & !IDget)
-				begin
-					Cam_ID <= Write_Symbol;
-					IDget <= 1'b1;
-				end
-				
-				Read_valid <= 'b1;
-				byte_num <= 'd2;
-				Reg_Read_Addr <= 'hf0;
-			end
-		end
+		
 				
 		S_CONFIG:
 		begin

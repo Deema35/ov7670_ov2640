@@ -2,7 +2,8 @@
 
 *.bak
 *.log
-*.rpt
+*.rpt 
+*.qws
 
 # Folders
 db/*
